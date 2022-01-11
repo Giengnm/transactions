@@ -1,0 +1,18 @@
+spring:
+  banner:
+    location: classpath:/banner/banner.txt
+  r2dbc:
+    url: r2dbc:h2:mem:///transactions?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    name: sa
+    password: password
+---
+application:
+  title: Bank-Transactions
+  version: 0.0.1-SNAPSHOT
+---
+logging:
+  level:
+    root: INFO
+    com.cesce: DEBUG
+    org.springframework.boot: INFO
+    org.springframework.data.r2dbc: DEBUG
